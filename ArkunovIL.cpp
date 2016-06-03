@@ -6,8 +6,8 @@
 void ArkunovIL::lab1()
 {
 
- float s;
- float W[N][N+1];
+ double s;
+ double W[N][N+1];
 
   for (int i=0;i<N;i++)
     for (int j=0;j<N;j++)
@@ -20,7 +20,7 @@ void ArkunovIL::lab1()
 
   for (int i = 0; i<N; i++)
    for (int j=i+1;j<N+1;j++){
-    float d = W[j][i]/W[i][i];
+    double d = W[j][i]/W[i][i];
     for (int k=0;k<N+1;k++)
       W[j][k]=W[j][k]-(W[i][k]*d);
    }
@@ -41,8 +41,8 @@ x[N-1]=0;
  */
 void ArkunovIL::lab2()
 {
- float s;
- float W[N][N+1];
+ double s;
+ double W[N][N+1];
 
   for (int i=0;i<N;i++)
     for (int j=0;j<N;j++)
@@ -57,7 +57,7 @@ int maxi = 0;
 for (int i = 1; i<N; i++)
     if (abs(W[i][0]) > abs(W[maxi][0])) maxi = i;
 
-float p;
+double p;
 if (maxi != 0) {
 
    for (int i = 0; i<N+1; i++){
@@ -69,7 +69,7 @@ if (maxi != 0) {
 
   for (int i = 0; i<N; i++)
    for (int j=i+1;j<N+1;j++){
-    float d = W[j][i]/W[i][i];
+    double d = W[j][i]/W[i][i];
     for (int k=0;k<N+1;k++)
       W[j][k]=W[j][k]-(W[i][k]*d);
    }
@@ -93,8 +93,8 @@ x[N-1]=0;
  */
 void ArkunovIL::lab3()
 {
-    float D[N][N], min, sum;
-     float S[N][N], tS[N][N], u[N], qq[N][N];
+    double D[N][N], min, sum;
+     double S[N][N], tS[N][N], u[N], qq[N][N];
       S[0][0]=sqrt(A[0][0]);
       D[0][0]=A[0][0]/A[0][0];
 
@@ -120,7 +120,7 @@ void ArkunovIL::lab3()
 
       for(int i=1; i<N; i++)
         for(int j=i+1; j<=N; j++)
-      {float sum=0;
+      {double sum=0;
           if(i>j) min=j;
             else min=i;
 
